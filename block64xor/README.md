@@ -35,6 +35,6 @@ At this point my plan became to pass in the encrypted flag and figure out some w
 At some point, though, it clicked - the service was XORing in eight-byte blocks and I could assume with high probability the first eight characters of the flag were "Equifax{", so what if I XORed that with the encrypted flag to get the pad and use the pad to decrypt the rest of the flag? 
 
 ```
-$ solns/block64xor.py 
+$ ./block64xor.py 
 Equifax{sad!_block64xor_is_vulnerable_to_a_partial_plaintext_attack_58aad32}
 ```
